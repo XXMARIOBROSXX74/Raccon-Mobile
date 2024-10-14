@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj": {}
+  },
+  "projects": {
+    "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
+        "projectName": "Web sockets",
+        "projectPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
+        "packagesPath": "C:\\Users\\batol\\.nuget\\packages\\",
+        "outputPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\batol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
