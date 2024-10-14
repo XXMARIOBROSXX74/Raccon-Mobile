@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\ACTIVIDADES\\Examen\\Web sockets\\Web sockets.csproj": {}
+    "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj": {}
   },
   "projects": {
-    "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\ACTIVIDADES\\Examen\\Web sockets\\Web sockets.csproj": {
+    "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\ACTIVIDADES\\Examen\\Web sockets\\Web sockets.csproj",
+        "projectUniqueName": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
         "projectName": "Web sockets",
-        "projectPath": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\ACTIVIDADES\\Examen\\Web sockets\\Web sockets.csproj",
+        "projectPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
         "packagesPath": "C:\\Users\\batol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\ACTIVIDADES\\Examen\\Web sockets\\obj\\",
+        "outputPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\batol\\AppData\\Roaming\\NuGet\\NuGet.Config"

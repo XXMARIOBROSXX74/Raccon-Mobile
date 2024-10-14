@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examen", "Examen", "{A751B9ED-D1C2-40D9-BB49-7765F32B8518}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web sockets", "Examen\Web sockets\Web sockets.csproj", "{D18FB2E7-64AF-41BF-8981-83FEDA5D262E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D18FB2E7-64AF-41BF-8981-83FEDA5D262E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18FB2E7-64AF-41BF-8981-83FEDA5D262E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18FB2E7-64AF-41BF-8981-83FEDA5D262E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18FB2E7-64AF-41BF-8981-83FEDA5D262E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D18FB2E7-64AF-41BF-8981-83FEDA5D262E} = {A751B9ED-D1C2-40D9-BB49-7765F32B8518}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDCC55C4-573E-44AB-8805-2C967115F23C}
+	EndGlobalSection
+EndGlobal
