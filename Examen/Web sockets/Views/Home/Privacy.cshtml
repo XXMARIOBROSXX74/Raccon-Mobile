@@ -1,6 +1,126 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>Use this page to detail your site's privacy policy.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea geo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+        #map {
+            height: 20rem;
+            width: 30rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Raccon Mobile</h1>
+        <h2>Reporte de fallas en su servicio</h2>
+        <p>Coloque sus datos correspondintes y en breve se le dará seguimiento a su pedido</p>
+    </div>
+    <div id="map">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </div>
+    <div>
+        <p>Nombre del titular</p>
+        <input type="text">
+        <p>Apellido Paterno</p>
+        <input type="text">
+        <p>Apellido Materno</p>
+        <input type="text">
+        <p>Numero de telefono de refencia</p>
+        <input type="text">
+        <br>
+        <label for="a">selecciona su problema presentado</label>
+        <select name="paises">
+            <option value="" disabled selected>Selecciona:</option>
+            <option value="es">Internet</option>
+            <option value="mx">Telefonia</option>
+            <option value="ar">Ambos</option>
+        </select>
+        <br>
+        <button>Enviar información</button>
+    </div>
+    <script>
+        //solicitar ubicacion
+        function obtenerUbicacion() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mostrarUbicacion, errorUbicacion);
+            } else {
+                alert("Tu navegador no soporta geolocalización.");
+            }
+        }
+
+        function mostrarUbicacion(position) {
+            const latitud = position.coords.latitude;
+            const longitud = position.coords.longitude;
+            //alert(`Tu ubicación es: Latitud: ${latitud}, Longitud: ${longitud}`);
+        }
+
+        function errorUbicacion(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("El usuario no permitió compartir su ubicación.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("La información de ubicación no está disponible.");
+                    break;
+                case error.TIMEOUT:
+                    alert("La solicitud de ubicación ha caducado.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("Se ha producido un error desconocido.");
+                    break;
+            }
+        }
+        // Llama a la función para obtener la ubicación
+        obtenerUbicacion();
+        //motrar el mapa
+        function GetUbicacion() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
+            } else {
+                lugar.innerText = "El navegador no soporta geolocalización";
+            }
+        }
+
+        function showPosition(position) {
+            map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 10);
+            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 20
+            }).addTo(map);
+            popup = L.popup();
+            //marcador 
+            var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+            marker.bindPopup("Tu ubicación").openPopup();
+        }
+
+        function errorPosition(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Por favor, de acceso a la ubicacion para una mejor experiencia");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("su");
+                    break;
+                case error.TIMEOUT:
+                    alert("si");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("so");
+                    break;
+            }
+        }
+        GetUbicacion();
+       
+    </script>
+</body>
+
+</html>
