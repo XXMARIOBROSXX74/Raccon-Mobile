@@ -1,5 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+@{
+    ViewData["Title"] = "Mapa";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea geo</title>
+    <title>Reporte de Fallas</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <style>
@@ -22,7 +22,7 @@
     <div>
         <h1>Raccon Mobile</h1>
         <h2>Reporte de fallas en su servicio</h2>
-        <p>Coloque sus datos correspondintes y en breve se le dará seguimiento a su pedido</p>
+        <p>Coloque sus datos correspondientes y en breve se le dará seguimiento a su pedido</p>
     </div>
     <div id="map"></div>
 
@@ -42,14 +42,30 @@
             <option value="Ambos">Ambos</option>
         </select>
         <br>
-        <button onclick="enviarInformacion()">Enviar información</button>
+        <!-- Campo oculto para almacenar la dirección obtenida -->
+        <input type="hidden" id="direccion">
+
+        <button type="button" class="mt-2 btn btn-success" id="btnPost">Enviar información</button>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="~/js/signalr.js"></script>
     <script>
+        const btnPost = document.getElementById("btnPost");
         let marker;
+        let direccion = ''; // Para almacenar la dirección obtenida
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/WebSocketServer")
+            .build();
 
-        // Obtener ubicación y mostrar mapa
+        connection.start().then(() => {
+            alert("Conexión exitosa al WebSocket");
+            GetUbicacion(); 
+        }).catch(err => {
+            console.error("Error al realizar la conexión", err);
+            alert("Error al realizar la conexión");
+        });
+
         function GetUbicacion() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
@@ -58,18 +74,30 @@
             }
         }
 
+        // Usar una API de geocodificación inversa para obtener la dirección
+        function obtenerDireccion(lat, lon) {
+            const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    direccion = data.display_name; // Guardar la dirección
+                    document.getElementById('direccion').value = direccion; // Almacenar la dirección en el input oculto
+                    marker.bindPopup(`Tu Dirección: ${direccion}`).openPopup();
+                })
+                .catch(err => {
+                    console.error('Error al obtener la dirección:', err);
+                });
+        }
+
         function showPosition(position) {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-
             const map = L.map('map').setView([lat, lon], 10);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 20
             }).addTo(map);
-
-            // Crear el marcador
             marker = L.marker([lat, lon]).addTo(map);
-            marker.bindPopup("Tu ubicación").openPopup();
+            obtenerDireccion(lat, lon); // Llamada para obtener la dirección
         }
 
         function errorPosition(error) {
@@ -89,25 +117,37 @@
             }
         }
 
-        GetUbicacion();
-
-        // Capturar la información y mostrarla en el popup del marcador
         function enviarInformacion() {
             const nombre = document.getElementById('nombre').value;
             const apellidos = document.getElementById('apellidos').value;
             const telefono = document.getElementById('telefono').value;
             const problema = document.getElementById('problema').value;
+            const fechaHora = new Date().toLocaleString(); 
+            const direccionActual = document.getElementById('direccion').value; // Obtener la dirección desde el campo oculto
 
-            const informacion = `
-                <strong>Nombre:</strong> ${nombre} ${apellidos}<br>
-                <strong>Teléfono:</strong> ${telefono}<br>
-                <strong>Problema:</strong> ${problema}
-            `;
+            const data = {
+                Nombre: nombre,
+                Apellidos: apellidos,
+                Telefono: telefono,
+                Problema: problema,
+                Fecha: fechaHora,
+                Direccion: direccionActual // Enviar la dirección al empleado
+            };
 
-            if (marker) {
-                marker.bindPopup(informacion).openPopup();
-            }
+            fetch("/CallCenter/Procesar", {
+                method: "POST",
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(result => {
+                  console.log("Información enviada:", result);
+                  // Actualizar el popup para mostrar la dirección actual
+                  marker.bindPopup(`<strong>Tu Dirección:</strong> ${direccionActual}`).openPopup(); // Mostrar siempre la dirección actual
+              })
+              .catch(err => console.error("Error al enviar información:", err));
         }
+
+        btnPost.addEventListener("click", enviarInformacion);
     </script>
 </body>
 

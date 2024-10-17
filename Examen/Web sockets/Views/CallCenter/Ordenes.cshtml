@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "Ordenes";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 50%;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <input type="number" class="form-control" id="txtPendiente" placeholder="Agregar pendientes">
+            <button class="mt-2 btn btn-warning" id="btnPendiente">Pendiente</button>
+
+            <input type="number" class="form-control" id="txtAtendido" placeholder="Agregar atendidos">
+            <button class="mt-2 btn btn-success" id="btnAtendido">Atendido</button>
+
+            <button class="mt-2 btn btn-success" id="btnAtenderPendiente">Atender pendiente</button>
+
+            <input type="number" class="form-control" id="txtCancelado" placeholder="Agregar cancelados">
+            <button class="mt-2 btn btn-danger" id="btnCancelado">Cancelar</button>
+
+            <button class="mt-2 btn btn-danger" id="btnCancelarPendiente">Cancelar pendiente</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function obtenerDatosLocalStorage() {
+            return {
+                pendientes: localStorage.getItem("pendientes") ? parseInt(localStorage.getItem("pendientes")) : 0,
+                atendidos: localStorage.getItem("atendidos") ? parseInt(localStorage.getItem("atendidos")) : 0,
+                cancelados: localStorage.getItem("cancelados") ? parseInt(localStorage.getItem("cancelados")) : 0
+            };
+        }
+
+        function guardarDatosLocalStorage(pendientes, atendidos, cancelados) {
+            localStorage.setItem("pendientes", pendientes);
+            localStorage.setItem("atendidos", atendidos);
+            localStorage.setItem("cancelados", cancelados);
+        }
+
+        const datos = obtenerDatosLocalStorage();
+
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                datasets: [
+                    {
+                        type: 'bar',
+                        label: 'Pendientes',
+                        data: [datos.pendientes],
+                        backgroundColor: ['Yellow']
+                    },
+                    {
+                        type: 'bar',
+                        label: 'Atendidos',
+                        data: [datos.atendidos],
+                        backgroundColor: ['Green']
+                    },
+                    {
+                        type: 'bar',
+                        label: 'Cancelados',
+                        data: [datos.cancelados],
+                        backgroundColor: ['Red']
+                    }
+                ],
+                labels: ['Ordenes']
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        function validarInput(input) {
+            const valor = parseInt(input.value);
+            return !isNaN(valor) && valor > 0;
+        }
+
+        function actualizarGraficaYLocalStorage(datasetIndex, cantidad, label) {
+            myChart.data.datasets[datasetIndex].data[0] += cantidad;
+            myChart.update();
+
+            const datosActuales = obtenerDatosLocalStorage();
+            if (label === 'pendientes') {
+                datosActuales.pendientes += cantidad;
+            } else if (label === 'atendidos') {
+                datosActuales.atendidos += cantidad;
+            } else if (label === 'cancelados') {
+                datosActuales.cancelados += cantidad;
+            }
+            guardarDatosLocalStorage(datosActuales.pendientes, datosActuales.atendidos, datosActuales.cancelados);
+        }
+
+        document.getElementById("btnPendiente").addEventListener("click", () => {
+            const txtPendiente = document.getElementById("txtPendiente");
+            if (validarInput(txtPendiente)) {
+                const cantidad = parseInt(txtPendiente.value);
+                actualizarGraficaYLocalStorage(0, cantidad, 'pendientes');
+            } else {
+                alert("Por favor, ingrese un número válido de pendientes.");
+            }
+        });
+
+        document.getElementById("btnAtendido").addEventListener("click", () => {
+            const txtAtendido = document.getElementById("txtAtendido");
+            if (validarInput(txtAtendido)) {
+                const cantidad = parseInt(txtAtendido.value);
+                actualizarGraficaYLocalStorage(1, cantidad, 'atendidos');
+            } else {
+                alert("Por favor, ingrese un número válido de atendidos.");
+            }
+        });
+
+        document.getElementById("btnCancelado").addEventListener("click", () => {
+            const txtCancelado = document.getElementById("txtCancelado");
+            if (validarInput(txtCancelado)) {
+                const cantidad = parseInt(txtCancelado.value);
+                actualizarGraficaYLocalStorage(2, cantidad, 'cancelados');
+            } else {
+                alert("Por favor, ingrese un número válido de cancelados.");
+            }
+        });
+
+        document.getElementById("btnAtenderPendiente").addEventListener("click", () => {
+            if (myChart.data.datasets[0].data[0] > 0) {
+                actualizarGraficaYLocalStorage(0, -1, 'pendientes');
+                actualizarGraficaYLocalStorage(1, 1, 'atendidos');
+            } else {
+                alert("No hay pendientes para mover a atendidos.");
+            }
+        });
+
+        document.getElementById("btnCancelarPendiente").addEventListener("click", () => {
+            if (myChart.data.datasets[0].data[0] > 0) {
+                actualizarGraficaYLocalStorage(0, -1, 'pendientes');
+                actualizarGraficaYLocalStorage(2, 1, 'cancelados');
+            } else {
+                alert("No hay pendientes para mover a cancelados.");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

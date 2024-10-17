@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5pty/06NBo4=",
+  "dgSpecHash": "KgHm8Bnm25g=",
   "success": true,
-  "projectFilePath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
+  "projectFilePath": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\Examen\\Web sockets\\Web sockets.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\batol\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.8\\microsoft.aspnetcore.connections.abstractions.8.0.8.nupkg.sha512",
     "C:\\Users\\batol\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\8.0.8\\microsoft.aspnetcore.http.connections.client.8.0.8.nupkg.sha512",

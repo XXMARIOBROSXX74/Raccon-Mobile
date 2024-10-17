@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "Empleado";
+}
+<div class="row">
+    <div class="col-6">
+        <h2>Formulario de Empleado</h2>
+        <label for="nombre">Nombre del titular</label>
+        <input type="text" id="nombre" class="form-control" readonly />
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" class="form-control" readonly />
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" class="form-control" readonly />
+        <label for="problema">Problema presentado</label>
+        <input type="text" id="problema" class="form-control" readonly />
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" class="form-control" readonly />
+        <label for="estado">Estado</label>
+        <input type="text" id="estado" class="form-control" value="Pendiente" readonly />
+        <br>
+        <button type="button" class="btn btn-success" id="btnAtendido">Atendido</button>
+        <button type="button" class="btn btn-danger" id="btnCancelado">Cancelar</button>
+    </div>
+</div>
+
+<script src="~/js/signalr.js"></script>
+<script>
+    const conexion = new signalR.HubConnectionBuilder()
+        .withUrl("/WebSocketServer")
+        .build();
+
+    conexion.start().then(() => {
+        console.log("Conexión exitosa");
+    }).catch((e) => {
+        console.error("Error al realizar la conexión:", e);
+    });
+
+    // Manejar el evento para recibir la información
+    conexion.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion) => {
+        // Actualizar los campos del formulario
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('apellidos').value = apellidos;
+        document.getElementById('telefono').value = telefono;
+        document.getElementById('problema').value = problema;
+        document.getElementById('direccion').value = direccion;  
+
+        // Restablecer el estado a "Pendiente"
+        document.getElementById("estado").value = "Pendiente"; 
+        console.log("Información recibida:", { nombre, apellidos, telefono, problema, direccion });
+    });
+
+    // Limpiar campos de entrada
+    function limpiarCampos() {
+        document.getElementById('nombre').value = '';
+        document.getElementById('apellidos').value = '';
+        document.getElementById('telefono').value = '';
+        document.getElementById('problema').value = '';
+        document.getElementById('direccion').value = '';
+        document.getElementById('estado').value = 'Pendiente'; // Dejar el estado como 'Pendiente'
+    }
+
+    // Actualizar el estado basado en los botones de atención/cancelación
+    function actualizarEstado(estado) {
+        // Asignar el nuevo estado al campo de estado
+        document.getElementById("estado").value = estado;
+
+        // Registrar la fecha y hora actual en la tabla del encargado
+        const fechaHoraActual = new Date().toLocaleString();
+        const filaEncargado = document.createElement("tr");
+        filaEncargado.innerHTML = `
+            <td>${document.getElementById('nombre').value}</td>
+            <td>${document.getElementById('apellidos').value}</td>
+            <td>${document.getElementById('telefono').value}</td>
+            <td>${document.getElementById('problema').value}</td>
+            <td>${document.getElementById('direccion').value}</td>
+            <td>${estado}</td>
+            <td>${fechaHoraActual}</td>
+            <td>${estado === "Atendido" ? fechaHoraActual : ""}</td>
+        `;
+
+        // Agregar la fila a la tabla en la vista del encargado
+        document.getElementById("tablaEncargados").appendChild(filaEncargado);
+
+        // Llamar al método para actualizar el estado en el servidor
+        conexion.invoke("ActualizarEstado", estado).catch(err => console.error(err));
+
+        // Limpiar campos después de presionar el botón
+        limpiarCampos();
+    }
+
+    document.getElementById("btnAtendido").addEventListener("click", () => {
+        actualizarEstado("Atendido");
+    });
+
+    document.getElementById("btnCancelado").addEventListener("click", () => {
+        actualizarEstado("Cancelado");
+    });
+</script>
+
+@{
+    ViewData["Title"] = "Encargado";
+}
+<div class="row">
+    <div class="col-6">
+        <h2>Formulario de Encargado</h2>
+        
+        <!-- Tabla para mostrar la información -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Problema</th>
+                    <th>Dirección</th>
+                    <th>Estado</th>
+                    <th>Fecha y Hora de Llegada</th>
+                    <th>Fecha y Hora de Atención/Cancelación</th>
+                </tr>
+            </thead>
+            <tbody id="tablaEncargados">
+                <!-- Las filas se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <br>
+    </div>
+</div>
+
+<script>
+    // Conectar el cliente del encargado
+    const connectionEncargado = new signalR.HubConnectionBuilder()
+        .withUrl("/WebSocketServer")
+        .build();
+
+    connectionEncargado.start().then(() => {
+        console.log("Conexión exitosa en la vista de encargado");
+    }).catch(err => {
+        console.error("Error al realizar la conexión:", err);
+    });
+
+    // Recibir datos en formato JSON desde la vista del mapa
+    connectionEncargado.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion) => {
+        // Crear una nueva fila en la tabla
+        const nuevaFila = document.createElement("tr");
+        nuevaFila.innerHTML = `
+            <td>${nombre}</td>
+            <td>${apellidos}</td>
+            <td>${telefono}</td>
+            <td>${problema}</td>
+            <td>${direccion}</td>
+            <td>Pendiente</td>
+            <td>${new Date().toLocaleString()}</td>
+            <td></td>
+        `;
+        document.getElementById("tablaEncargados").appendChild(nuevaFila);
+        console.log("Información recibida en la vista de encargado:", { nombre, apellidos, telefono, problema, direccion });
+    });
+</script>

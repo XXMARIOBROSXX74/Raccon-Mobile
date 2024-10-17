@@ -759,11 +759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
+      "projectUniqueName": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\Examen\\Web sockets\\Web sockets.csproj",
       "projectName": "Web sockets",
-      "projectPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\Web sockets.csproj",
+      "projectPath": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\Examen\\Web sockets\\Web sockets.csproj",
       "packagesPath": "C:\\Users\\batol\\.nuget\\packages\\",
-      "outputPath": "C:\\RepostCallCenter\\Raccon-Mobile\\Examen\\Web sockets\\obj\\",
+      "outputPath": "C:\\Users\\batol\\Documents\\SEMESTRE 7\\DISEÑO Y DESARROLLO FRONT-END\\UNIDAD 2 JavaScript Avanzado 20%\\Examen\\Web sockets\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\batol\\AppData\\Roaming\\NuGet\\NuGet.Config"

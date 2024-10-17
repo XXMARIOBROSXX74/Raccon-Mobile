@@ -1,0 +1,70 @@
+@{
+    ViewData["Title"] = "Encargado";
+}
+<div class="row">
+    <div class="col-6">
+        <h2>Formulario de Encargado</h2>
+        
+        <!-- Tabla para mostrar la información -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Problema</th>
+                    <th>Dirección</th>
+                    <th>Estado</th>
+                    <th>Fecha y Hora de Llegada</th>
+                    <th>Fecha y Hora de Atención/Cancelación</th>
+                </tr>
+            </thead>
+            <tbody id="tablaEncargados">
+                <!-- Las filas se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <br>
+    </div>
+</div>
+
+<script src="~/js/signalr.js"></script>
+<script>
+    // Conectar el cliente del encargado
+   const connectionEncargado = new signalR.HubConnectionBuilder()
+            .withUrl("/WebSocketServer")
+            .build();
+
+        connectionEncargado.start().then(() => {
+            console.log("Conexión exitosa en la vista de encargado");
+        }).catch(err => {
+            console.error("Error al realizar la conexión:", err);
+        });
+
+        // Recibir datos en formato JSON desde la vista del mapa
+        connectionEncargado.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion) => {
+            const nuevaFila = document.createElement("tr");
+            nuevaFila.innerHTML = `
+                <td>${nombre}</td>
+                <td>${apellidos}</td>
+                <td>${telefono}</td>
+                <td>${problema}</td>
+                <td>${direccion}</td>
+                <td>Pendiente</td>
+                <td>${new Date().toLocaleString()}</td>
+                <td></td>
+            `;
+            document.getElementById("tablaEncargados").appendChild(nuevaFila);
+            console.log("Información recibida en la vista de encargado:", { nombre, apellidos, telefono, problema, direccion });
+        });
+
+        // Actualizar la gráfica al recibir un pedido nuevo
+        connectionEncargado.on("ActualizarGrafica", (estado) => {
+            if (estado === "Pendiente") {
+                myChart.data.datasets[0].data[0] += 1; // Incrementar pendientes
+                myChart.update();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\appsettings.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\package-lock.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\package.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.staticwebassets.runtime.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.exe
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.deps.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.runtimeconfig.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Web sockets.pdb
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.csproj.AssemblyReference.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.AssemblyInfoInputs.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.AssemblyInfo.cs
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.csproj.CoreCompileInputs.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.RazorAssemblyInfo.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.RazorAssemblyInfo.cs
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.Web sockets.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.build.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\scopedcss\bundle\Web sockets.styles.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\scopedcss\projectbundle\Web sockets.bundle.scp.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sock.E668B402.Up2Date
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\refint\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.pdb
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\Web sockets.genruntimeconfig.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\ACTIVIDADES\Examen\Web sockets\obj\Debug\net8.0\ref\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\appsettings.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\package-lock.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\package.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.staticwebassets.runtime.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.exe
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.deps.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.runtimeconfig.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Web sockets.pdb
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.csproj.AssemblyReference.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.AssemblyInfoInputs.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.AssemblyInfo.cs
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.csproj.CoreCompileInputs.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.RazorAssemblyInfo.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.RazorAssemblyInfo.cs
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.Web sockets.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.build.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Web sockets.props
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\scopedcss\bundle\Web sockets.styles.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\scopedcss\projectbundle\Web sockets.bundle.scp.css
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sock.E668B402.Up2Date
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\refint\Web sockets.dll
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.pdb
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\Web sockets.genruntimeconfig.cache
+C:\Users\batol\Documents\SEMESTRE 7\DISEÑO Y DESARROLLO FRONT-END\UNIDAD 2 JavaScript Avanzado 20%\Examen\Web sockets\obj\Debug\net8.0\ref\Web sockets.dll
