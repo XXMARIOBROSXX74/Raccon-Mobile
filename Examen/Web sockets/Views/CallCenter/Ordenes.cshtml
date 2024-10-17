@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div style="width: 50%;">
+    <div style="width: 90%;">
         <canvas id="myChart"></canvas>
     </div>
     <div class="row">
@@ -32,6 +32,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/js/signalr.js"></script>
+    
     <script>
         function obtenerDatosLocalStorage() {
             return {
@@ -109,8 +111,6 @@
             if (validarInput(txtPendiente)) {
                 const cantidad = parseInt(txtPendiente.value);
                 actualizarGraficaYLocalStorage(0, cantidad, 'pendientes');
-            } else {
-                alert("Por favor, ingrese un número válido de pendientes.");
             }
         });
 
@@ -119,8 +119,6 @@
             if (validarInput(txtAtendido)) {
                 const cantidad = parseInt(txtAtendido.value);
                 actualizarGraficaYLocalStorage(1, cantidad, 'atendidos');
-            } else {
-                alert("Por favor, ingrese un número válido de atendidos.");
             }
         });
 
@@ -129,8 +127,6 @@
             if (validarInput(txtCancelado)) {
                 const cantidad = parseInt(txtCancelado.value);
                 actualizarGraficaYLocalStorage(2, cantidad, 'cancelados');
-            } else {
-                alert("Por favor, ingrese un número válido de cancelados.");
             }
         });
 
@@ -138,8 +134,6 @@
             if (myChart.data.datasets[0].data[0] > 0) {
                 actualizarGraficaYLocalStorage(0, -1, 'pendientes');
                 actualizarGraficaYLocalStorage(1, 1, 'atendidos');
-            } else {
-                alert("No hay pendientes para mover a atendidos.");
             }
         });
 
@@ -147,8 +141,31 @@
             if (myChart.data.datasets[0].data[0] > 0) {
                 actualizarGraficaYLocalStorage(0, -1, 'pendientes');
                 actualizarGraficaYLocalStorage(2, 1, 'cancelados');
-            } else {
-                alert("No hay pendientes para mover a cancelados.");
+            }
+        });
+
+        const connectionOrdenes = new signalR.HubConnectionBuilder()
+            .withUrl("/WebSocketServer")
+            .build();
+
+        connectionOrdenes.start().then(() => {
+           
+        }).catch(err => {
+            
+        });
+
+        connectionOrdenes.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion, fecha) => {
+            actualizarGraficaYLocalStorage(0, 1, 'pendientes');
+        });
+
+        connectionOrdenes.on("EstadoActualizado", (estado) => {
+            if (estado === "Atendido") {
+                actualizarGraficaYLocalStorage(0, -1, 'pendientes');
+                actualizarGraficaYLocalStorage(1, 1, 'atendidos');
+                
+            } else if (estado === "Cancelado") {
+                actualizarGraficaYLocalStorage(0, -1, 'pendientes');
+                actualizarGraficaYLocalStorage(2, 1, 'cancelados');
             }
         });
 

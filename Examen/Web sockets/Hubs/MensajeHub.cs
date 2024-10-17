@@ -13,7 +13,6 @@ namespace Web_sockets.Hubs
         }
          public async Task ActualizarEstado(string estado)
         {
-            // Aquí puedes implementar lógica adicional según sea necesario.
             await Clients.All.SendAsync("EstadoActualizado", estado);
         }
     }

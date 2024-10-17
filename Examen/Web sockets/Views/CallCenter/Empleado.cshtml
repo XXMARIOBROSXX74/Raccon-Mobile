@@ -1,4 +1,4 @@
-@{
+@{ 
     ViewData["Title"] = "Empleado";
 }
 <div class="row">
@@ -29,41 +29,31 @@
         .build();
 
     conexion.start().then(() => {
-        console.log("Conexión exitosa");
+        
     }).catch((e) => {
-        console.error("Error al realizar la conexión:", e);
+       
     });
 
-    // Manejar el evento para recibir la información
     conexion.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion) => {
-        // Actualizar los campos del formulario
         document.getElementById('nombre').value = nombre;
         document.getElementById('apellidos').value = apellidos;
         document.getElementById('telefono').value = telefono;
         document.getElementById('problema').value = problema;
         document.getElementById('direccion').value = direccion;  
-
-        // Restablecer el estado a "Pendiente"
         document.getElementById("estado").value = "Pendiente"; 
         console.log("Información recibida:", { nombre, apellidos, telefono, problema, direccion });
     });
 
-    // Limpiar campos de entrada
     function limpiarCampos() {
         document.getElementById('nombre').value = '';
         document.getElementById('apellidos').value = '';
         document.getElementById('telefono').value = '';
         document.getElementById('problema').value = '';
         document.getElementById('direccion').value = '';
-        document.getElementById('estado').value = 'Pendiente'; // Dejar el estado como 'Pendiente'
+        document.getElementById('estado').value = 'Pendiente';
     }
 
-    // Actualizar el estado basado en los botones de atención/cancelación
     function actualizarEstado(estado) {
-        // Asignar el nuevo estado al campo de estado
-        document.getElementById("estado").value = estado;
-
-        // Registrar la fecha y hora actual en la tabla del encargado
         const fechaHoraActual = new Date().toLocaleString();
         const filaEncargado = document.createElement("tr");
         filaEncargado.innerHTML = `
@@ -74,16 +64,12 @@
             <td>${document.getElementById('direccion').value}</td>
             <td>${estado}</td>
             <td>${fechaHoraActual}</td>
-            <td>${estado === "Atendido" ? fechaHoraActual : ""}</td>
+            <td>${estado === "Atendido" ? fechaHoraActual : "" || estado === "Cancelado" ? fechaHoraActual : ""}</td>
         `;
 
-        // Agregar la fila a la tabla en la vista del encargado
         document.getElementById("tablaEncargados").appendChild(filaEncargado);
 
-        // Llamar al método para actualizar el estado en el servidor
         conexion.invoke("ActualizarEstado", estado).catch(err => console.error(err));
-
-        // Limpiar campos después de presionar el botón
         limpiarCampos();
     }
 
@@ -96,14 +82,9 @@
     });
 </script>
 
-@{
-    ViewData["Title"] = "Encargado";
-}
 <div class="row">
     <div class="col-6">
-        <h2>Formulario de Encargado</h2>
-        
-        <!-- Tabla para mostrar la información -->
+        <h2>Tabla de resgistros</h2>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -117,42 +98,7 @@
                     <th>Fecha y Hora de Atención/Cancelación</th>
                 </tr>
             </thead>
-            <tbody id="tablaEncargados">
-                <!-- Las filas se agregarán dinámicamente aquí -->
-            </tbody>
+            <tbody id="tablaEncargados"></tbody>
         </table>
-
-        <br>
     </div>
 </div>
-
-<script>
-    // Conectar el cliente del encargado
-    const connectionEncargado = new signalR.HubConnectionBuilder()
-        .withUrl("/WebSocketServer")
-        .build();
-
-    connectionEncargado.start().then(() => {
-        console.log("Conexión exitosa en la vista de encargado");
-    }).catch(err => {
-        console.error("Error al realizar la conexión:", err);
-    });
-
-    // Recibir datos en formato JSON desde la vista del mapa
-    connectionEncargado.on("EnviarMensajeTodos", (nombre, apellidos, telefono, problema, direccion) => {
-        // Crear una nueva fila en la tabla
-        const nuevaFila = document.createElement("tr");
-        nuevaFila.innerHTML = `
-            <td>${nombre}</td>
-            <td>${apellidos}</td>
-            <td>${telefono}</td>
-            <td>${problema}</td>
-            <td>${direccion}</td>
-            <td>Pendiente</td>
-            <td>${new Date().toLocaleString()}</td>
-            <td></td>
-        `;
-        document.getElementById("tablaEncargados").appendChild(nuevaFila);
-        console.log("Información recibida en la vista de encargado:", { nombre, apellidos, telefono, problema, direccion });
-    });
-</script>
